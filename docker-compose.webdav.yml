@@ -5,3 +5,10 @@ services:
     restart: always
     volumes:
       - /mnt/store/webdav:/var/lib/dav
+    networks:
+      - global
+
+networks:
+  global:
+    external:
+      name: global
