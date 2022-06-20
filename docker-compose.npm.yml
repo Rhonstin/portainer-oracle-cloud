@@ -12,7 +12,12 @@ services:
       - /mnt/store/npm/letsencrypt:/etc/letsencrypt
     networks:
       - global
+      - bridge
 
 networks:
-  global:
-    driver: ipvlan
+  default:
+    external:
+      name: global
+  second:
+    external:
+      name: bridge
