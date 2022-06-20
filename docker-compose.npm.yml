@@ -12,8 +12,10 @@ services:
       - /mnt/store/npm/letsencrypt:/etc/letsencrypt
     networks:
       - global
+      - bridge
 
 networks:
-  second:
+  default:
     external:
-      name: bridge
+      name: global
+  npm:
