@@ -9,12 +9,8 @@ services:
       - /mnt/store/bitwarden:/data
     networks:
       - global
-      - bridge
 
 networks:
-  default:
+  global:
     external:
       name: global
-  second:
-    external:
-      name: bridge
