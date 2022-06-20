@@ -15,7 +15,7 @@ services:
       - npm
 
 networks:
-  - second:
-      external:
-        name: bridge
-  - npm
+  second:
+    external:
+      name: bridge
+  npm:
