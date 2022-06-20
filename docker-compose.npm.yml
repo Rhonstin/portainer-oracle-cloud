@@ -10,3 +10,9 @@ services:
     volumes:
       - /mnt/store/npm/data:/data
       - /mnt/store/npm/letsencrypt:/etc/letsencrypt
+    networks:
+      - global
+
+networks:
+  global:
+    driver: ipvlan
