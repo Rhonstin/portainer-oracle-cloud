@@ -9,7 +9,12 @@ services:
       - /mnt/store/bitwarden:/data
     networks:
       - global
+      - bridge
 
 networks:
-  global:
-    driver: ipvlan
+  default:
+    external:
+      name: global
+  second:
+    external:
+      name: bridge
