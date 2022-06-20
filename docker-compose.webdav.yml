@@ -1,10 +1,10 @@
 version: '3'
 services:
   webdav:
-    image: derkades/webdav:latest
-    restart: always
+    container_name: webdav
+    image: derkades/webdav   
     volumes:
-      - /mnt/store/webdav:/var/lib/dav
+      - /mnt/store/webdav:/data
     networks:
       - global
 
